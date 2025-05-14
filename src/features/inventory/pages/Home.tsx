@@ -1,4 +1,3 @@
-import { Navbar } from '../components/Navbar'
 import { RecentProducts } from '../components/RecentProducts'
 import { InputComp } from '../../../components/Input'
 import { SummaryCard } from '../components/SummaryCard'
@@ -7,8 +6,6 @@ import { SummaryCard } from '../components/SummaryCard'
 export const Home = () => {
   return (
     <div className='flex h-screen'>
-
-      <Navbar />
 
       <main className='flex-1 p-6 bg-gray-100'>
 

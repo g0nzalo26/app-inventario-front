@@ -1,34 +1,29 @@
-import { Button } from './Button'
-
-const botones = [
-    { label: 'Inicio' },
-    { label: 'Productos' },
-    { label: 'Reportes' },
-    { label: 'Configuración' },
-    { label: 'LogOut' },
-
-]
+import { Link, NavLink } from "react-router-dom"
 
 export const Navbar = () => {
     return (
+
         <aside className='flex flex-row'>
+            
 
             <section className="flex flex-col items-start w-64 h-screen p-6 bg-white">
-
-                <h1 className="text-3xl">Inventario</h1>
-
+                <Link className="text-3xl" to="/">Inventario</Link>
                 <nav className="flex flex-col gap-y-6 mt-6 w-full">
 
-                    {
-                        botones.map((boton, index) => (
-                            <Button key={index} label={boton.label} />
-                        ))
-                    }
-
+                    <NavLink
+                        className={ ({isActive}) => `w-full flex items-center p-3 hover:bg-gray-100 rounded-lg ${ isActive ? 'active' : '' }` }
+                        to="home"
+                    >
+                        Inicio
+                    </NavLink>
+                    
                 </nav>
 
             </section>
 
         </aside>
+
+
+
     )
 }
