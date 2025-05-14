@@ -5,9 +5,9 @@ import { SummaryCard } from '../components/SummaryCard'
 
 export const Home = () => {
   return (
-    <div className='flex h-screen'>
+    <div className='flex min-h-screen'>
 
-      <main className='flex-1 p-6 bg-gray-100'>
+      <main className='flex-1 p-6 bg-gray-100 '>
 
         <InputComp type='text' placeholder='Buscar Producto... ' />
 
